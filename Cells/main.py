@@ -4,7 +4,7 @@ userInput: [str] = input("Enter an input: ").split(", ")
 
 # decide type of cell operation
 
-class Operations:
+class CellOperations:
     
     @staticmethod
     def divide(cell: str):
@@ -19,6 +19,6 @@ class Operations:
         print(cell[n:] + cell[-n if n > 0 else 8 :])
     
 
-if   userInput[0]     == "DIVIDE":   Operations.divide(                         userInput[1])
-elif userInput[0][:3] == "ADD":      Operations.add     (int(userInput[0][-1]), userInput[1])
-elif userInput[0][:8] == "SUBTRACT": Operations.subtract(int(userInput[0][-1]), userInput[1])
+if   userInput[0]     == "DIVIDE":   CellOperations.divide(                         userInput[1])
+elif userInput[0][:3] == "ADD":      CellOperations.add     (int(userInput[0][-1]), userInput[1])
+elif userInput[0][:8] == "SUBTRACT": CellOperations.subtract(int(userInput[0][-1]), userInput[1])
