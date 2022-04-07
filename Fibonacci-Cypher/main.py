@@ -14,10 +14,7 @@ for index, char in enumerate(message):
     fibNum = fibonacci_numbers[index]
     offsetDecoded = ord(offset)
 
-    print(fibNum, offsetDecoded)
-
-    if fibNum + offsetDecoded >= 122:
-        fibNum = 97 + (122 - fibNum)
-
+    if offsetDecoded + fibonacci_numbers[index] >= 122:
+        offsetDecoded = 78
 
     print(f"Offset ASCII Code: {offsetDecoded + fibonacci_numbers[index]}")
